@@ -5,8 +5,8 @@ CarrierWave.configure do |config|
   config.fog_public = false
   config.fog_credentials = {
     provider:              'AWS',                        # required
-    aws_access_key_id:     ENV["AKIA324C6MZYTRRI6MWD"],        # required
-    aws_secret_access_key: ENV["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"],        # required
+    aws_access_key_id:     ENV["AWS_ACCESS_KEY"],        # required
+    aws_secret_access_key: ENV["AWS_SECRET_KEY"],        # required
   }
-  config.fog_directory  = ENV["my-new-user"]              # required
+  config.fog_directory  = ENV["AWS_BUCKET"]              # required
 end

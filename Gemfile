@@ -70,7 +70,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
 
-gem 'will_paginate'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 
 gem 'simple_form'
 
@@ -82,8 +83,8 @@ gem "geocoder"
 
 gem "figaro"
 
-gem 'carrierwave', '~> 2.0'
-
+gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave-aws', '~> 1.0.2'
 gem 'fog-aws'
 
 source 'https://rails-assets.org' do
