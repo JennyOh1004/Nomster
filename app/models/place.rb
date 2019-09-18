@@ -1,6 +1,9 @@
 class Place < ApplicationRecord
   belongs_to :user
   has_many :comments
+  has_many :photos
+
+  #created photos function. 9/17/2019
 
   geocoded_by :address
   after_validation :geocode
