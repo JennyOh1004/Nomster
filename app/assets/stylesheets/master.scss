@@ -1,7 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
 .booyah-box{
 	-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
 	-moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -17,11 +16,12 @@
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
+	font-family: 'josefin_sansregular', sans-serif;
 }
 
 body{
 	background: image_url('dot-grid.png');
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'josefin_sansregular', sans-serif;
 }
 
 .navbar{
@@ -85,6 +85,11 @@ blockquote:before{
 
 blockquote p{
 	display: inline;
+	font-family: 'josefin_sansregular', sans-serif;
+}
+
+.btn-secondary {
+	color: #e91e63;
 }
 
 
