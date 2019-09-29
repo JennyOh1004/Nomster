@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
 .booyah-box{
 	-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
 	-moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -44,6 +45,7 @@ body{
 }
 
 
+
 .digg_pagination{
 	text-align: center;
 }
@@ -61,6 +63,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'josefin_sansregular', sans-serif;
 }
 
 #map {
