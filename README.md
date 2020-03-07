@@ -3,7 +3,9 @@
 
 A yelp clone that integrates with the Google Map API and includes features user comments, start ratings, image uploading, and user authentication.
 
+
 I created the web application using Ruby, Ruby on Rails framework, HTML, CSS, and bootstrap.
+
 
 I set up the files such as MVC ( Models, view, controllers ).
 
