@@ -1,10 +1,10 @@
-<div class="booyah-box">
+<div class="booyah-box user-box">
   <div class="row">
 	<div class="col-4">
-	  <%= image_tag 'user.png' %>
+	  <%= image_tag 'user.png', class: 'user-img' %>
 	</div>
 
-<div class="col-8">
+<div class="col-8 user-info">
 <h1><%= @user.email %></h1>
 <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
 <h4><%= @user.comments.count %> total comments </h4>
@@ -16,12 +16,12 @@
 </div>
 
 <br /><br />
-<h1 class="text-center">My Comments</h1>
+<h1 class="text-center my-des">My Comments</h1>
 <br /><br />
 <div class="row">
 <% @user.comments.each do |comment| %>
-<div class="col-12 col-sm-6">
-	<h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+<div class="col-12 col-sm-6 my-commend-box">
+	<h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place), class:'commend-text' %></h2>
     <blockquote>
       <% if comment.humanized_rating.present? %>
         <b><%= comment.humanized_rating %></b> -
@@ -35,12 +35,12 @@
 
 <div class="clear"></div>
 <br /><br />
-<h2 class="text-center">My Places</h2>
+<h2 class="text-center my-des">My Places</h2>
 <br /><br />
 
 <% @user.places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
+  <div class="booyah-box col-10 offset-1 place-box">
+    <h1><%= link_to place.name, place_path(place), class: 'box' %></h1><br />
     <i><%= place.address %></i><br />
     <p><%= place.description %></p><br />
 

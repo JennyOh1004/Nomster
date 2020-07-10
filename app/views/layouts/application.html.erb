@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nomster</title>
+    <title>Out Side</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+   
+    </head>
 
   <body>
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <nav class="navbar navbar-toggleable-md navbar-inverse">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <a class="navbar-brand" href="#">Nomster</a> -->
-  <%= link_to 'Nomster', root_path, class: 'navbar-brand' %>
+  <!-- <a class="navbar-brand" href="#">OutSide</a> -->
+  <%= link_to root_path do %>
+  <%= image_tag 'outside-logo.png', class: 'logo-img' %>
+  <% end %>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -42,6 +47,7 @@
       <li class="nav-item">
         <%= link_to 'Sign in', new_user_session_path, class: 'nav_link' %>
       </li>
+      
       <li>
         <%= link_to 'Sign up', new_user_registration_path, class: 'nav_link' %>
       </li>

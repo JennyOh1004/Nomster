@@ -5,17 +5,18 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag 'slider1.jpg', class: 'image-fluid' %>
+      <%= image_tag 'meal1.jpg', class: 'image-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find the best pizza places</h3>
+        <h3>Find the best breakfast places</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider2.jpg', class: 'image-fluid' %>
+      <%= image_tag 'meal2.jpg', class: 'image-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Looking for hotdogs?</h3>
+        <h3>Looking for a luxury restaurant near you?</h3>
       </div>
   </div>
+  
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -28,8 +29,8 @@
 
 
 <% @places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
+  <div class="booyah-box col-10 offset-1 place-box">
+    <h1><%= link_to place.name, place_path(place), class: 'box' %></h1><br />
     <i><%= place.address %></i><br />
     <p><%= place.description %></p><br />
 
@@ -38,7 +39,7 @@
     <% end %>
 
 <% if place.comments.present? %>
- <div class="col-12">
+ <div class="col-12 commend-box">
       <blockquote>
         <% if place.comments.last.humanized_rating.present? %>
           <b><%= place.comments.last.humanized_rating %></b> -
